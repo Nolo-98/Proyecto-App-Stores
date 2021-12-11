@@ -13,7 +13,7 @@ import androidx.room.RoomDatabase
  *
  * Diseño para Apps
  ***/
-@Database(entities = arrayOf(StoreEntity::class), version = 2)
+@Database(entities = arrayOf(StoreEntity::class), version = 1)
 abstract class StoreDatabase : RoomDatabase() {
     abstract fun storeDao(): StoreDao
 }
