@@ -23,16 +23,6 @@ class MainActivity : AppCompatActivity(), OnClickListener, MainAux {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
-        /*mBinding.btnSave.setOnClickListener {
-            val store = StoreEntity(name = mBinding.etName.text.toString().trim())
-
-            Thread {
-                StoreApplication.database.storeDao().addStore(store)
-            }.start()
-
-            mAdapter.add(store)
-        }*/
-
         mBinding.fab.setOnClickListener { launchEditFragment() }
 
         setupRecylcerView()
@@ -54,7 +44,7 @@ class MainActivity : AppCompatActivity(), OnClickListener, MainAux {
 
     private fun setupRecylcerView() {
         mAdapter = StoreAdapter(mutableListOf(), this)
-        mGridLayout = GridLayoutManager(this, 2)
+        mGridLayout = GridLayoutManager(this, resources.getInteger(R.integer.main_colums))
         getStores()
 
         mBinding.recyclerView.apply {
