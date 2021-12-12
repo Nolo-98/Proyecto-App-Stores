@@ -22,4 +22,8 @@
     <string name="dialog_options_title">¿Qué desea hacer?</string>
     <string name="main_error_no_website">Esta tienda no cuenta con un Sitio Web</string>
     <string name="main_error_no_resolve">No se encontro ninguna app compatible</string>
+
+
+    <string name="options_item_call">Llamar</string>
+    <string name="options_item_website">Ir al Sitio Web</string>
 </resources>
